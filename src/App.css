@@ -1,0 +1,51 @@
+/* Variables */
+:root {
+  /* font */
+  --main-font: 'Orbitron', sans-serif;
+  --main-bg-color: lightyellow;
+}
+
+/* CSS reset */
+body, div {
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+  background-color: var(--main-bg-color);
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+
+.svg-header {
+  fill: var(--main-bg-color);
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

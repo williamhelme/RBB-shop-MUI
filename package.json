@@ -1,0 +1,24 @@
+{
+  "name": "shop-MUI",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "react-scripts": "1.1.5"
+  },
+  "dependencies": {
+    "enzyme": "^3.6.0",
+    "enzyme-adapter-react-16": "^1.5.0",
+    "jest-bdd": "^0.4.0",
+    "jest-cucumber": "^1.0.9",
+    "lodash": "^4.17.11",
+    "material-ui": "^0.20.2",
+    "react": "^16.5.0",
+    "react-dom": "^16.5.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
