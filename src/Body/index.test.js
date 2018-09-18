@@ -1,6 +1,7 @@
+import React from 'react';
 import { loadFeature, defineFeature } from 'jest-cucumber';
+import { shallow, mount } from 'enzyme'
 import Body from './'
-import { shallow } from 'enzyme'
 
 const feature = loadFeature('./src/Body/body.feature', {
   errorOnMissingScenariosAndSteps: true
@@ -8,12 +9,47 @@ const feature = loadFeature('./src/Body/body.feature', {
 
 defineFeature(feature, test => {
   test('Loading the App body', ({ given, when, then, pending }) => {
+    let elem;
     given('the Body has loaded', () => {
-        pending();
+      elem = shallow(<Body />);
     });
 
-  then('there should be a main tag', () => {
-        pending();
+    then('a page title should exist', () => {
+        expect(elem.contains(<h1>Welcome to Bex's Bakes</h1>)).toEqual(true);
     });
-});
+  });
+//https://github.com/airbnb/enzyme/tree/master/docs/api/ReactWrapper
+  test('Displaying the content', ({ given, when, then, pending }) => {
+    let elem;
+    let container;
+
+    given('the Body has loaded', () => {
+      elem = mount(<Body />);
+    });
+
+    when('it is setup correctly', () => {
+      container = elem.findWhere(n => {
+        return n.name() == 'Grid' && n.prop('container');
+      })
+      expect(container.props().spacing).toEqual(24);
+    })
+
+    then('a 3 column grid should exist for desktop', () => {
+      expect(container.findWhere(n => {
+        return n.name() == 'Grid' && n.prop('item');
+      }).props().lg).toEqual(4)
+    })
+
+    then('a 2 column grid should exist for tablet', () => {
+      expect(container.findWhere(n => {
+        return n.name() == 'Grid' && n.prop('item');
+      }).prop('md')).toEqual(6)
+    })
+
+    then('a 1 column grid should exist for mobile', () => {
+      expect(container.findWhere(n => {
+        return n.name() == 'Grid' && n.prop('item');
+      }).prop('sm')).toEqual(12)
+    })
+  })
 })

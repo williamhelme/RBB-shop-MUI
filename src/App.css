@@ -1,8 +1,8 @@
 /* Variables */
 :root {
   /* font */
-  --main-font: 'Orbitron', sans-serif;
-  --main-bg-color: lightyellow;
+  --main-font: 'Indie Flower', cursive;
+  --main-bg-color: #e7eae5;
 }
 
 /* CSS reset */
@@ -13,6 +13,7 @@ body, div {
 
 
 body {
+  font-family: var(--main-font);
   background-color: var(--main-bg-color);
 }
 

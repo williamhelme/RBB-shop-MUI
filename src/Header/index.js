@@ -31,14 +31,14 @@ class Header extends Component {
             style={{
               position: 'absolute',
               bottom: -3,
-              left: 0,
-              width: '100vw',
+              left: -100,
+              width: 'calc(100vw + 101px)',
               height: '20%',
               color: 'var(--main-bg-color)',
               zIndex: 1
             }}
              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
-              <polygon class='svg-header' points="0,100 100,0 100,100"/>
+              <polygon className='svg-header' points="0,100 100,0 100,100"/>
             </svg>
         </section>
       </header>
