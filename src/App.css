@@ -18,25 +18,11 @@ body, div {
 body {
   font-family: var(--main-font);
   background-color: var(--main-bg-color);
+  overflow-x: none;
 }
 
 .App {
   text-align: center;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
 }
 
 .svg-header {
