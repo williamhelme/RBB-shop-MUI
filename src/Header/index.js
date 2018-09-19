@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 class Header extends Component {
   render() {
+    const { skew = 20 } = this.props;
     return (
       <header>
         <object type="image/svg+xml" data="./brand_logo.svg" style={{
@@ -33,7 +34,7 @@ class Header extends Component {
               bottom: -3,
               left: -100,
               width: 'calc(100vw + 101px)', // extra width to stop blur on sides
-              height: '20%',
+              height: `${skew}%`,
               color: 'var(--main-bg-color)',
               zIndex: 1
             }}

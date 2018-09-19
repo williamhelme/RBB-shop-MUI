@@ -26,9 +26,20 @@ defineFeature(feature, test => {
 
     then('the background should skew', () => {
       expect(Elem.find('section').length).toEqual(1);
-      
       expect(Elem.find('article').length).toEqual(1);
+      expect(Elem.find('svg').props().style.height).toEqual('6%')
     });
   });
 
+  test('it renders correctly', ({ given, when, then, pending }) => {
+    let Elem;
+    
+    given('it has rendered', () => {
+      Elem = shallow(<Header />);
+    })
+    
+    then('it should match the snapshot', () => {
+      expect(Elem).toMatchSnapshot();
+    })
+  })
 })
