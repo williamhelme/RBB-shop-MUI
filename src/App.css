@@ -2,7 +2,10 @@
 :root {
   /* font */
   --main-font: 'Indie Flower', cursive;
-  --main-bg-color: #e7eae5;
+  --main-bg-color: #fdf6b7;
+  --secondary-bg-color: #fbfff8;
+  --main-text-color: #000000de;
+  --secondary-text-color: #2abcf2;
 }
 
 /* CSS reset */
@@ -21,11 +24,6 @@ body {
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
 .App-header {
   background-color: #222;
   height: 150px;
@@ -41,12 +39,12 @@ body {
   font-size: large;
 }
 
-
 .svg-header {
   fill: var(--main-bg-color);
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+footer {
+  background-color: var(--secondary-bg-color);
+  border-top: 4px solid var(--secondary-text-color);
+  margin-top: 2em;
 }

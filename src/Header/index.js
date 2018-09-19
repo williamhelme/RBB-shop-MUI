@@ -5,7 +5,7 @@ class Header extends Component {
     return (
       <header>
         <object type="image/svg+xml" data="./brand_logo.svg" style={{
-          position: 'fixed',
+          position: 'absolute',
           height: '10em',
           left: '2%',
           top: '2%',
@@ -32,7 +32,7 @@ class Header extends Component {
               position: 'absolute',
               bottom: -3,
               left: -100,
-              width: 'calc(100vw + 101px)',
+              width: 'calc(100vw + 101px)', // extra width to stop blur on sides
               height: '20%',
               color: 'var(--main-bg-color)',
               zIndex: 1

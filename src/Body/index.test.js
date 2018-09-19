@@ -37,19 +37,19 @@ defineFeature(feature, test => {
     then('a 3 column grid should exist for desktop', () => {
       expect(container.findWhere(n => {
         return n.name() == 'Grid' && n.prop('item');
-      }).props().lg).toEqual(4)
+      }).first().props().lg).toEqual(3)
     })
 
     then('a 2 column grid should exist for tablet', () => {
       expect(container.findWhere(n => {
         return n.name() == 'Grid' && n.prop('item');
-      }).prop('md')).toEqual(6)
+      }).first().prop('md')).toEqual(6)
     })
 
     then('a 1 column grid should exist for mobile', () => {
       expect(container.findWhere(n => {
         return n.name() == 'Grid' && n.prop('item');
-      }).prop('sm')).toEqual(12)
+      }).first().prop('sm')).toEqual(12)
     })
   })
 })
