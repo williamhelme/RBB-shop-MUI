@@ -15,9 +15,13 @@ class Body extends Component {
       <main>
         <h1>Welcome to Bex's Bakes</h1>
         <Grid container spacing={24}>
-          {this.state.items.map((item, key) => 
+          {this.state.items.map(({ title, description, image }, key) => 
             <Grid item xs={12} sm={12} md={6} lg={3} key={key}>
-                <Card />
+              <Card
+                title={title}
+                description={description}
+                image={image}
+              />
             </Grid>
           )}  
         </Grid>

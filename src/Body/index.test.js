@@ -30,7 +30,7 @@ defineFeature(feature, test => {
     when('it is setup correctly', () => {
       container = elem.findWhere(n => {
         return n.name() == 'Grid' && n.prop('container');
-      })
+      }).first();
       expect(container.props().spacing).toEqual(24);
     })
 

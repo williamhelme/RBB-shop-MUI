@@ -13,20 +13,24 @@ const SecondaryColor = ({ children }) => <span style={{
 }}>{children}</span>
 
 
-function MediaCard(props) {
+function MediaCard({
+  title = 'Cake',
+  description = 'Cake description...',
+  image = './cake.jpg'
+}) {
   return (
     <Card>
       <CardActionArea>
         <CardMedia
-          image={'./cake.jpg'}
+          image={image}
           title="Cake"
         />
         <CardContent>
           <Typography gutterBottom variant="headline" component="h2">
-            Cake
+            {title}
           </Typography>
           <Typography component="p">
-            Cake description....
+            {description}
           </Typography>
         </CardContent>
       </CardActionArea>
@@ -36,14 +40,26 @@ function MediaCard(props) {
           <SecondaryColor>View ingredients</SecondaryColor>
           </Typography>
         </Button>
-        <Button size="small" color="primary">
+        <Button size="small">
           <Typography>
-          <SecondaryColor>View Recipe</SecondaryColor>
+          <SecondaryColor>View recipe</SecondaryColor>
           </Typography>
         </Button>
       </CardActions>
     </Card>
   );
 }
+
+MediaCard.propTypes = {
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+}
+
+MediaCard.defaultProps = {
+  title: 'Cake',
+  description: 'Cake description...',
+  image: './cake.jpg'
+};
 
 export default MediaCard;
