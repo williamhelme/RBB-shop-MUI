@@ -1,7 +1,7 @@
 /* Variables */
 :root {
   /* font */
-  --main-font: 'Indie Flower', cursive;
+  --main-font: "Indie Flower", cursive;
   --main-bg-color: #fdf6b7;
   --secondary-bg-color: #fbfff8;
   --main-text-color: #000000de;
@@ -9,16 +9,16 @@
 }
 
 /* CSS reset */
-body, div {
+body,
+div {
   margin: 0;
   padding: 0;
 }
 
-
 body {
   font-family: var(--main-font);
   background-color: var(--main-bg-color);
-  overflow-x: none;
+  overflow-x: hidden;
 }
 
 .App {
@@ -27,6 +27,11 @@ body {
 
 .svg-header {
   fill: var(--main-bg-color);
+}
+
+.containerGrid {
+  padding-left: 3em;
+  padding-right: 3em;
 }
 
 footer {
