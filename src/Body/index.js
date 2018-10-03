@@ -6,8 +6,14 @@ class Body extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      items: [{}, {}, {}, {}]
+      items: props.items || []
     };
+  }
+
+  componentWillReceiveProps(nextProps) {
+    this.setState({
+      items: nextProps.items
+    });
   }
 
   render() {
@@ -15,9 +21,9 @@ class Body extends Component {
       <main>
         <h1>Welcome to Bex's Bakes</h1>
         <Grid container spacing={24} className={"containerGrid"}>
-          {this.state.items.map(({ title, description, image }, key) => (
+          {this.state.items.map(({ title, description, image, name }, key) => (
             <Grid item xs={12} sm={12} md={6} lg={3} key={key}>
-              <Card title={title} description={description} image={image} />
+              <Card title={name} description={description} image={image} />
             </Grid>
           ))}
         </Grid>
