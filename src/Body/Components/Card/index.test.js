@@ -6,7 +6,9 @@ import Typography from "@material-ui/core/Typography";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 
-const feature = loadFeature("./src/Body/Components/Card/card.feature");
+const feature = loadFeature("./src/Body/Components/Card/card.feature", {
+  errorOnMissingScenariosAndSteps: true
+});
 
 defineFeature(feature, test => {
   test("Loading the Card", ({ given, when, then, pending }) => {
