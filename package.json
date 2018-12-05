@@ -4,7 +4,7 @@
   "private": true,
   "devDependencies": {
     "gh-pages": "^2.0.0",
-    "react-scripts": "1.1.5"
+    "react-scripts": "^2.1.1"
   },
   "homepage": "http://williamhelme.github.io/RBB-shop-MUI",
   "dependencies": {
@@ -18,7 +18,8 @@
     "lodash": "^4.17.11",
     "material-ui": "^0.20.2",
     "react": "^16.5.0",
-    "react-dom": "^16.5.0"
+    "react-dom": "^16.5.0",
+    "react-router": "^4.3.1"
   },
   "scripts": {
     "start": "react-scripts start",
