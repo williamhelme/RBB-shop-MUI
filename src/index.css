@@ -1,5 +1,22 @@
+html,
+body {
+  height: 100%;
+}
+
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  overscroll-behavior: none;
+  scroll-behavior: smooth;
+}
+
+#root {
+  flex: 1 0 auto;
+}
+
+#page-footer {
+  flex-shrink: 0;
 }

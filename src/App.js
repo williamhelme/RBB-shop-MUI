@@ -3,7 +3,6 @@ import "./App.css";
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 import Body from "./Body/";
 import Header from "./Header/";
-import Footer from "./Footer/";
 import { auth, recipesCollection } from "./config/firebaseConfig";
 
 const theme = createMuiTheme({
@@ -59,13 +58,12 @@ class App extends Component {
   }
 
   render() {
-    const { items = [], loading } = this.state;
+    const { items = [] } = this.state;
     return (
       <div className="App">
         <MuiThemeProvider theme={theme}>
           <Header />
-          <Body items={items} loading={loading} />
-          <Footer />
+          <Body items={items} />
         </MuiThemeProvider>
       </div>
     );
