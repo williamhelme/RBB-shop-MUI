@@ -1,14 +1,8 @@
 import React from "react";
 import { loadFeature, defineFeature } from "jest-cucumber";
-// import { shallow, mount } from "enzyme";
 import EditableList from "./";
-import TextField from "@material-ui/core/TextField";
-import Button from "@material-ui/core/Button";
-import IconButton from "@material-ui/core/IconButton";
-import Icon from "@material-ui/core/Icon";
 import InputBase from "@material-ui/core/InputBase/InputBase";
-import ListItem from "@material-ui/core/ListItem";
-import { createMount, createShallow } from "@material-ui/core/test-utils";
+import { createShallow } from "@material-ui/core/test-utils";
 
 const feature = loadFeature(
   "./src/Body/Components/EditableList/EditableList.feature",
