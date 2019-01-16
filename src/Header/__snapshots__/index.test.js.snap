@@ -21,63 +21,63 @@ ShallowWrapper {
         <object
           data="./brand_logo.svg"
           style={
-                    Object {
-                              "height": "10em",
-                              "left": "2%",
-                              "position": "absolute",
-                              "top": "2%",
-                              "zIndex": 1,
-                            }
+            Object {
+              "height": "10em",
+              "left": "2%",
+              "position": "absolute",
+              "top": "2%",
+              "zIndex": 1,
+            }
           }
           type="image/svg+xml"
->
+        >
           <img
-                    alt="No SVG support"
-                    src="./cake.jpg"
+            alt="No SVG support"
+            src="./cake.jpg"
           />
-</object>,
+        </object>,
         <section
           style={
-                    Object {
-                              "height": "40vh",
-                              "position": "relative",
-                              "width": "100vw",
-                            }
+            Object {
+              "height": "40vh",
+              "position": "relative",
+              "width": "100vw",
+            }
           }
->
+        >
           <article
-                    style={
-                              Object {
-                                        "background": "url(./cake.jpg) no-repeat",
-                                        "backgroundPosition": "center",
-                                        "backgroundSize": "cover",
-                                        "filter": "blur(1px)",
-                                        "height": "inherit",
-                                      }
-                    }
+            style={
+              Object {
+                "background": "url(./cake.jpg) no-repeat",
+                "backgroundPosition": "center",
+                "backgroundSize": "cover",
+                "filter": "blur(1px)",
+                "height": "inherit",
+              }
+            }
           />
           <svg
-                    preserveAspectRatio="none"
-                    style={
-                              Object {
-                                        "bottom": -3,
-                                        "color": "var(--main-bg-color)",
-                                        "height": "20%",
-                                        "left": -100,
-                                        "position": "absolute",
-                                        "width": "calc(100vw + 101px)",
-                                        "zIndex": 1,
-                                      }
-                    }
-                    viewBox="0 0 100 100"
-                    xmlns="http://www.w3.org/2000/svg"
+            preserveAspectRatio="none"
+            style={
+              Object {
+                "bottom": -3,
+                "color": "var(--main-bg-color)",
+                "height": "20%",
+                "left": -100,
+                "position": "absolute",
+                "width": "calc(100vw + 101px)",
+                "zIndex": 1,
+              }
+            }
+            viewBox="0 0 100 100"
+            xmlns="http://www.w3.org/2000/svg"
           >
-                    <polygon
-                              className="svg-header"
-                              points="0,100 100,0 100,100"
-                    />
+            <polygon
+              className="svg-header"
+              points="0,100 100,0 100,100"
+            />
           </svg>
-</section>,
+        </section>,
       ],
     },
     "ref": null,
@@ -90,7 +90,7 @@ ShallowWrapper {
           "children": <img
             alt="No SVG support"
             src="./cake.jpg"
-/>,
+          />,
           "data": "./brand_logo.svg",
           "style": Object {
             "height": "10em",
@@ -124,36 +124,36 @@ ShallowWrapper {
           "children": Array [
             <article
               style={
-                            Object {
-                                          "background": "url(./cake.jpg) no-repeat",
-                                          "backgroundPosition": "center",
-                                          "backgroundSize": "cover",
-                                          "filter": "blur(1px)",
-                                          "height": "inherit",
-                                        }
+                Object {
+                  "background": "url(./cake.jpg) no-repeat",
+                  "backgroundPosition": "center",
+                  "backgroundSize": "cover",
+                  "filter": "blur(1px)",
+                  "height": "inherit",
+                }
               }
-/>,
+            />,
             <svg
               preserveAspectRatio="none"
               style={
-                            Object {
-                                          "bottom": -3,
-                                          "color": "var(--main-bg-color)",
-                                          "height": "20%",
-                                          "left": -100,
-                                          "position": "absolute",
-                                          "width": "calc(100vw + 101px)",
-                                          "zIndex": 1,
-                                        }
+                Object {
+                  "bottom": -3,
+                  "color": "var(--main-bg-color)",
+                  "height": "20%",
+                  "left": -100,
+                  "position": "absolute",
+                  "width": "calc(100vw + 101px)",
+                  "zIndex": 1,
+                }
               }
               viewBox="0 0 100 100"
               xmlns="http://www.w3.org/2000/svg"
->
+            >
               <polygon
-                            className="svg-header"
-                            points="0,100 100,0 100,100"
+                className="svg-header"
+                points="0,100 100,0 100,100"
               />
-</svg>,
+            </svg>,
           ],
           "style": Object {
             "height": "40vh",
@@ -188,7 +188,7 @@ ShallowWrapper {
               "children": <polygon
                 className="svg-header"
                 points="0,100 100,0 100,100"
-/>,
+              />,
               "preserveAspectRatio": "none",
               "style": Object {
                 "bottom": -3,
@@ -233,63 +233,63 @@ ShallowWrapper {
           <object
             data="./brand_logo.svg"
             style={
-                        Object {
-                                    "height": "10em",
-                                    "left": "2%",
-                                    "position": "absolute",
-                                    "top": "2%",
-                                    "zIndex": 1,
-                                  }
+              Object {
+                "height": "10em",
+                "left": "2%",
+                "position": "absolute",
+                "top": "2%",
+                "zIndex": 1,
+              }
             }
             type="image/svg+xml"
->
+          >
             <img
-                        alt="No SVG support"
-                        src="./cake.jpg"
+              alt="No SVG support"
+              src="./cake.jpg"
             />
-</object>,
+          </object>,
           <section
             style={
-                        Object {
-                                    "height": "40vh",
-                                    "position": "relative",
-                                    "width": "100vw",
-                                  }
+              Object {
+                "height": "40vh",
+                "position": "relative",
+                "width": "100vw",
+              }
             }
->
+          >
             <article
-                        style={
-                                    Object {
-                                                "background": "url(./cake.jpg) no-repeat",
-                                                "backgroundPosition": "center",
-                                                "backgroundSize": "cover",
-                                                "filter": "blur(1px)",
-                                                "height": "inherit",
-                                              }
-                        }
+              style={
+                Object {
+                  "background": "url(./cake.jpg) no-repeat",
+                  "backgroundPosition": "center",
+                  "backgroundSize": "cover",
+                  "filter": "blur(1px)",
+                  "height": "inherit",
+                }
+              }
             />
             <svg
-                        preserveAspectRatio="none"
-                        style={
-                                    Object {
-                                                "bottom": -3,
-                                                "color": "var(--main-bg-color)",
-                                                "height": "20%",
-                                                "left": -100,
-                                                "position": "absolute",
-                                                "width": "calc(100vw + 101px)",
-                                                "zIndex": 1,
-                                              }
-                        }
-                        viewBox="0 0 100 100"
-                        xmlns="http://www.w3.org/2000/svg"
+              preserveAspectRatio="none"
+              style={
+                Object {
+                  "bottom": -3,
+                  "color": "var(--main-bg-color)",
+                  "height": "20%",
+                  "left": -100,
+                  "position": "absolute",
+                  "width": "calc(100vw + 101px)",
+                  "zIndex": 1,
+                }
+              }
+              viewBox="0 0 100 100"
+              xmlns="http://www.w3.org/2000/svg"
             >
-                        <polygon
-                                    className="svg-header"
-                                    points="0,100 100,0 100,100"
-                        />
+              <polygon
+                className="svg-header"
+                points="0,100 100,0 100,100"
+              />
             </svg>
-</section>,
+          </section>,
         ],
       },
       "ref": null,
@@ -302,7 +302,7 @@ ShallowWrapper {
             "children": <img
               alt="No SVG support"
               src="./cake.jpg"
-/>,
+            />,
             "data": "./brand_logo.svg",
             "style": Object {
               "height": "10em",
@@ -336,36 +336,36 @@ ShallowWrapper {
             "children": Array [
               <article
                 style={
-                                Object {
-                                                "background": "url(./cake.jpg) no-repeat",
-                                                "backgroundPosition": "center",
-                                                "backgroundSize": "cover",
-                                                "filter": "blur(1px)",
-                                                "height": "inherit",
-                                              }
+                  Object {
+                    "background": "url(./cake.jpg) no-repeat",
+                    "backgroundPosition": "center",
+                    "backgroundSize": "cover",
+                    "filter": "blur(1px)",
+                    "height": "inherit",
+                  }
                 }
-/>,
+              />,
               <svg
                 preserveAspectRatio="none"
                 style={
-                                Object {
-                                                "bottom": -3,
-                                                "color": "var(--main-bg-color)",
-                                                "height": "20%",
-                                                "left": -100,
-                                                "position": "absolute",
-                                                "width": "calc(100vw + 101px)",
-                                                "zIndex": 1,
-                                              }
+                  Object {
+                    "bottom": -3,
+                    "color": "var(--main-bg-color)",
+                    "height": "20%",
+                    "left": -100,
+                    "position": "absolute",
+                    "width": "calc(100vw + 101px)",
+                    "zIndex": 1,
+                  }
                 }
                 viewBox="0 0 100 100"
                 xmlns="http://www.w3.org/2000/svg"
->
+              >
                 <polygon
-                                className="svg-header"
-                                points="0,100 100,0 100,100"
+                  className="svg-header"
+                  points="0,100 100,0 100,100"
                 />
-</svg>,
+              </svg>,
             ],
             "style": Object {
               "height": "40vh",
@@ -400,7 +400,7 @@ ShallowWrapper {
                 "children": <polygon
                   className="svg-header"
                   points="0,100 100,0 100,100"
-/>,
+                />,
                 "preserveAspectRatio": "none",
                 "style": Object {
                   "bottom": -3,
