@@ -57,6 +57,10 @@ class App extends Component {
     });
   }
 
+  componentWillUnmount() {
+    this.removeAuthListener = null;
+  }
+
   render() {
     const { items = [] } = this.state;
     return (
