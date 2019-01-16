@@ -15,27 +15,8 @@ defineFeature(feature, test => {
       Elem = shallow(<Footer />);
     });
 
-    then("there should be a footer tag", () => {
-      expect(Elem.type()).toEqual("footer");
+    then("there should be contact details", () => {
+      expect(Elem.contains(<article>Tel: 01234 567890</article>)).toBeTruthy();
     });
   });
 });
-// defineFeature(feature, test => {
-//   test('Successful Login with Valid Credentials', ({ given, when, then, pending }) => {
-//     given('User is on Home Page', () => {
-//       pending();
-//     });
-
-//     when('User Navigate to LogIn Page', () => {
-//       pending();
-//     });
-
-//     when('User enters UserName and Password', () => {
-//       pending();
-//     });
-
-//     then('Message displayed Login Successfully', () => {
-//       pending();
-//     });
-//   });
-// })
