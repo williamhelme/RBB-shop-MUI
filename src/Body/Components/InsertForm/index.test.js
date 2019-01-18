@@ -1,9 +1,11 @@
 import React from "react";
 import { loadFeature, defineFeature } from "jest-cucumber";
-import { shallow, mount } from "enzyme";
 import InsertForm from "./";
 import TextField from "@material-ui/core/TextField";
-// import Button from "@material-ui/core/Button";
+import Button from "@material-ui/core/Button";
+import { Section } from "./";
+import EditableList from "../EditableList/";
+import { createShallow } from "@material-ui/core/test-utils";
 
 const feature = loadFeature(
   "./src/Body/Components/InsertForm/InsertForm.feature",
@@ -13,45 +15,60 @@ const feature = loadFeature(
 );
 
 defineFeature(feature, test => {
+  let shallow = null;
+  let Form = null;
+  beforeEach(() => {
+    shallow = createShallow({ dive: true });
+  });
   test("Loading the form", ({ given, when, then, pending }) => {
-    const Form = null;
     given("the Form has loaded", () => {
       Form = shallow(<InsertForm />);
     });
 
     then("the form should exist", () => {
-      expect(Form).toExist();
+      expect(Form.exists()).toEqual(true);
     });
 
     then(
       "a name, description, instructions and image input field should exist",
       () => {
-        // expect(Form).toContain(<TextField label="name" />);
-        // expect(Form).toContain(
-        //   <TextField label="description" multiline rows="4" />
-        // );
-        // expect(Form).toContain(<TextField label="description" />);
-        // expect(Form).toContain(
-        //   <input
-        //     accept="image/*"
-        //     id="contained-button-file"
-        //     multiple
-        //     type="file"
-        //   />
-        // );
-        // expect(Form).toContain(
-        //   <label htmlFor="contained-button-file">
-        //     <Button variant="contained" component="span">
-        //       Upload
-        //     </Button>
-        //   </label>
-        // );
-        pending();
+        expect(
+          Form.containsMatchingElement(
+            <TextField label="Name" id="insert-form-name" />
+          )
+        ).toBeTruthy();
+        expect(
+          Form.containsMatchingElement(
+            <TextField label="Description" id="insert-form-description" />
+          )
+        ).toBeTruthy();
       }
     );
 
+    then("a recipe section with an editable list should exist", () => {
+      expect(
+        Form.containsMatchingElement(
+          <Section control={EditableList} heading={"Recipe"} />
+        )
+      ).toBeTruthy();
+    });
+
+    then("a instructions section with an editable list should exist", () => {
+      expect(
+        Form.containsMatchingElement(
+          <Section control={EditableList} heading={"Cooking Instructions"} />
+        )
+      ).toBeTruthy();
+    });
+
     then("an insert button should exist", () => {
-      pending();
+      expect(
+        Form.containsMatchingElement(
+          <Button size="medium" variant="contained" color="primary">
+            Submit
+          </Button>
+        )
+      ).toBeTruthy();
     });
   });
 

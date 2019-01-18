@@ -151,7 +151,12 @@ class EditableList extends React.Component {
 }
 
 EditableList.propTypes = {
-  classes: PropTypes.object.isRequired
+  classes: PropTypes.object.isRequired,
+  items: PropTypes.array
+};
+
+EditableList.defaultProps = {
+  items: []
 };
 
 export default withStyles(styles)(EditableList);
