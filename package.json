@@ -4,7 +4,7 @@
   "private": true,
   "devDependencies": {
     "gh-pages": "^2.0.0",
-    "react-scripts": "^2.1.1"
+    "react-scripts": "^2.1.3"
   },
   "homepage": "http://williamhelme.github.io/RBB-shop-MUI",
   "dependencies": {
@@ -12,9 +12,12 @@
     "enzyme": "^3.6.0",
     "enzyme-adapter-react-16": "^1.5.0",
     "firebase": "^5.5.1",
+    "firebase-admin": "^6.5.1",
     "firebase-mock": "^2.2.10",
+    "http2": "^3.3.7",
     "jest-bdd": "^0.4.0",
     "jest-cucumber": "^1.0.9",
+    "jquery": "^3.3.1",
     "lodash": "^4.17.11",
     "material-ui": "^0.20.2",
     "react": "^16.5.0",
@@ -23,8 +26,8 @@
     "react-router-dom": "^4.3.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "react-scripts start && sw-precache --config=sw-precache-config.js",
+    "build": "react-scripts build && sw-precache --config=sw-precache-config.js",
     "test": "react-scripts test --env=jsdom",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",

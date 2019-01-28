@@ -1,4 +1,5 @@
 import firebase from "firebase";
+import "firebase/app";
 import "firebase/firestore";
 import "firebase/auth";
 import registerServiceWorker from "./registerServiceWorker";
@@ -21,12 +22,16 @@ const db = firebase.firestore();
 const auth = firebase.auth();
 const currentUser = auth.currentUser;
 
-auth.signInAnonymously().catch(function(error) {
-  // Handle Errors here.
-  var errorCode = error.code;
-  var errorMessage = error.message;
-  console.error(`${errorCode}: ${errorMessage}`);
-});
+// auth.signInAnonymously().catch(function(error) {
+//   // Handle Errors here.
+//   var errorCode = error.code;
+//   var errorMessage = error.message;
+//   console.error(`${errorCode}: ${errorMessage}`);
+// });
+
+const provider = new firebase.auth.GoogleAuthProvider();
+
+export const AuthProvider = provider;
 
 // date issue fix according to firebase
 const settings = {
