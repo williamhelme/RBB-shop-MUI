@@ -18,7 +18,7 @@ const CloseIcon = () => <Icon>close_circle</Icon>;
 const styles = theme => {
   return {
     root: { flexGrow: 10, maxWidth: 400 },
-    inputBaseStyle: { marginRight: "15px", width: 1000 },
+    inputBaseStyle: { marginRight: "40px" },
     paper: { marginTop: "2px" }
   };
 };
@@ -90,10 +90,11 @@ class EditableList extends React.Component {
         <List>
           <Paper className="floating insert-section" elevation={2}>
             <ListItem>
-              <FormControl>
+              <FormControl fullWidth>
                 <InputBase
                   className={`${classes.inputBaseStyle} insert-field`}
                   placeholder="New Entry"
+                  multiline
                   value={this.state.term}
                   onKeyPress={this.onKeyPress}
                   onChange={this.onChangeEntry}
@@ -124,10 +125,11 @@ class EditableList extends React.Component {
                     style={{ fontWeigt: 800, fontSize: 16 }}
                   >{`${index + 1}.`}</Typography>
                 </ListItemIcon>
-                <FormControl>
+                <FormControl fullWidth>
                   <InputBase
                     className={classes.inputBaseStyle}
                     value={element}
+                    multiline
                     onChange={event => this.onChangeItem(event, index)}
                     onBlur={event => this.deleteEmptyItem(event, index)}
                   />

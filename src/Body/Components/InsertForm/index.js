@@ -19,16 +19,6 @@ const styles = theme => ({
   }
 });
 
-// const Spacer = () => (
-//   <div
-//     style={{
-//       borderTop: "1px solid darkgray",
-//       marginLeft: "2em",
-//       marginRight: "2em"
-//     }}
-//   />
-// );
-
 export const Section = ({ heading, control: Control }) => (
   <FormGroup
     style={{
@@ -55,6 +45,7 @@ class InsertForm extends Component {
     super(props);
 
     this.state = {};
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleChange = name => event => {
@@ -62,6 +53,8 @@ class InsertForm extends Component {
       [name]: event.target.value
     });
   };
+
+  handleSubmit() {}
 
   render() {
     const { props, state } = this;
@@ -123,6 +116,7 @@ class InsertForm extends Component {
             variant="contained"
             color="primary"
             className={classes.button}
+            onClick={this.handleSubmit}
           >
             Submit
           </Button>
