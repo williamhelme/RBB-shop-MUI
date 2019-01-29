@@ -71,6 +71,7 @@ class LoginForm extends React.Component {
   }
 
   componentWillUnmount() {
+    this.authListener && this.authListener();
     this.authListener = null;
   }
 
