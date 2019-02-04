@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import Button from "@material-ui/core/Button";
 import fb, { auth, AuthProvider } from "../../../config/firebaseConfig";
 // import $ from "jquery";
@@ -178,9 +177,5 @@ class LoginForm extends React.Component {
     );
   }
 }
-
-LoginForm.propTypes = {
-  onProfileChange: PropTypes.func.isRequired
-};
 
 export default LoginForm;
