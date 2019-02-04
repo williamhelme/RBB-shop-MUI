@@ -8,11 +8,11 @@ import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import Collapse from "@material-ui/core/Collapse";
 
-const SecondaryColor = ({ children }) => (
+const SecondaryColor = ({ children, style }) => (
   <span
-    style={{
+    style={Object.assign({}, style, {
       color: "var(--secondary-text-color)"
-    }}
+    })}
   >
     {children}
   </span>
@@ -21,14 +21,31 @@ const SecondaryColor = ({ children }) => (
 class MediaCard extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      showIngredients: false,
+      showRecipe: false
+    };
+    this.showIngredients = this.showIngredients.bind(this);
+    this.showRecipe = this.showRecipe.bind(this);
   }
+
+  showIngredients() {
+    this.setState({
+      showIngredients: !this.state.showIngredients,
+      showRecipe: false
+    });
+  }
+
+  showRecipe() {
+    this.setState({
+      showIngredients: false,
+      showRecipe: !this.state.showRecipe
+    });
+  }
+
   render() {
-    const {
-      title = "Cake",
-      description = "Cake description...",
-      image = "./tools.jpg"
-    } = this.props;
+    const { title, description, image } = this.props;
+    const { showRecipe, showIngredients } = this.state;
     return (
       <Card>
         <CardMedia
@@ -48,18 +65,37 @@ class MediaCard extends Component {
           <Typography component="p">{description}</Typography>
         </CardContent>
         <CardActions>
-          <Button size="small">
+          <Button size="small" onClick={this.showIngredients}>
             <Typography>
-              <SecondaryColor>View ingredients</SecondaryColor>
+              <SecondaryColor>{`${
+                !this.state.showIngredients ? "View" : "Hide"
+              } ingredients`}</SecondaryColor>
             </Typography>
           </Button>
-          <Button size="small">
+          <Button size="small" onClick={this.showRecipe}>
             <Typography>
-              <SecondaryColor>View recipe</SecondaryColor>
+              <SecondaryColor>{`${
+                !this.state.showRecipe ? "View" : "Hide"
+              } recipe`}</SecondaryColor>
             </Typography>
           </Button>
         </CardActions>
-        <Collapse in={false} timeout="auto" unmountOnExit>
+        <Collapse
+          in={!showRecipe && showIngredients}
+          timeout="auto"
+          unmountOnExit
+        >
+          <CardContent>
+            <Typography paragraph variant="body2">
+              Ingredients:
+            </Typography>
+          </CardContent>
+        </Collapse>
+        <Collapse
+          in={showRecipe && !showIngredients}
+          timeout="auto"
+          unmountOnExit
+        >
           <CardContent>
             <Typography paragraph variant="body2">
               Method:
