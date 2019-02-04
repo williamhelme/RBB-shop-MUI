@@ -266,5 +266,3 @@ self.addEventListener('fetch', function(event) {
 
 
 
-importScripts("./service-worker-custom.js");
-
