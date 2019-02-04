@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "9d7e7d5fda464024ffb6",
+    "revision": "4d1bae3f574e1137e2cc",
     "url": "/RBB-shop-MUI/static/css/main.84d32114.chunk.css"
   },
   {
-    "revision": "9d7e7d5fda464024ffb6",
-    "url": "/RBB-shop-MUI/static/js/main.9d7e7d5f.chunk.js"
+    "revision": "4d1bae3f574e1137e2cc",
+    "url": "/RBB-shop-MUI/static/js/main.4d1bae3f.chunk.js"
   },
   {
     "revision": "e0360bb38b7aa8c9017f",
@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/RBB-shop-MUI/static/js/runtime~main.25ed000c.js"
   },
   {
-    "revision": "8612acdec6997486cc4e3c5c4742c2a1",
+    "revision": "9318bfb9bdc9cf3632f4629fa5814c42",
     "url": "/RBB-shop-MUI/index.html"
   }
 ];
