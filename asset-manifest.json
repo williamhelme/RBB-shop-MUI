@@ -1,6 +1,13 @@
 {
-  "main.css": "static/css/main.fba4ec52.css",
-  "main.css.map": "static/css/main.fba4ec52.css.map",
-  "main.js": "static/js/main.670e25b0.js",
-  "main.js.map": "static/js/main.670e25b0.js.map"
+  "main.css": "/RBB-shop-MUI/static/css/main.84d32114.chunk.css",
+  "main.js": "/RBB-shop-MUI/static/js/main.693a8d95.chunk.js",
+  "main.js.map": "/RBB-shop-MUI/static/js/main.693a8d95.chunk.js.map",
+  "static/js/1.e0360bb3.chunk.js": "/RBB-shop-MUI/static/js/1.e0360bb3.chunk.js",
+  "static/js/1.e0360bb3.chunk.js.map": "/RBB-shop-MUI/static/js/1.e0360bb3.chunk.js.map",
+  "runtime~main.js": "/RBB-shop-MUI/static/js/runtime~main.25ed000c.js",
+  "runtime~main.js.map": "/RBB-shop-MUI/static/js/runtime~main.25ed000c.js.map",
+  "static/css/main.84d32114.chunk.css.map": "/RBB-shop-MUI/static/css/main.84d32114.chunk.css.map",
+  "index.html": "/RBB-shop-MUI/index.html",
+  "precache-manifest.f5752e1d3810d014c9de2dd5966f99b2.js": "/RBB-shop-MUI/precache-manifest.f5752e1d3810d014c9de2dd5966f99b2.js",
+  "service-worker.js": "/RBB-shop-MUI/service-worker.js"
 }
