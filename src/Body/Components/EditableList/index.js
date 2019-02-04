@@ -62,7 +62,7 @@ class EditableList extends React.Component {
     if (this.state.term !== "") {
       this.setState({
         term: "",
-        items: [this.state.term].concat(this.state.items)
+        items: [].concat(this.state.items).concat(this.state.term)
       });
     }
   }
@@ -76,8 +76,13 @@ class EditableList extends React.Component {
     });
   }
 
+  getItems() {
+    return this.state.items;
+  }
+
   onKeyPress(event) {
     if (event.key === "Enter") {
+      event.preventDefault();
       this.addItem();
     }
   }
@@ -87,15 +92,16 @@ class EditableList extends React.Component {
 
     return (
       <div className={classes.root}>
-        <List>
+        <List style={{ paddingTop: 0 }}>
           <Paper className="floating insert-section" elevation={2}>
             <ListItem>
               <FormControl fullWidth>
                 <InputBase
                   className={`${classes.inputBaseStyle} insert-field`}
-                  placeholder="New Entry"
+                  placeholder="..."
                   multiline
                   value={this.state.term}
+                  margin="dense"
                   onKeyPress={this.onKeyPress}
                   onChange={this.onChangeEntry}
                 />
