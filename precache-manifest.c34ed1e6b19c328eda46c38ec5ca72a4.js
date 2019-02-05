@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/RBB-shop-MUI/static/js/runtime~main.25ed000c.js"
   },
   {
-    "revision": "9318bfb9bdc9cf3632f4629fa5814c42",
+    "revision": "745c98c7dc1009512b2b32c364af3857",
     "url": "/RBB-shop-MUI/index.html"
   }
 ];
