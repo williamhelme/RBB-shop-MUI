@@ -27,7 +27,7 @@ class Body extends Component {
     return (
       <main>
         <h1>Welcome to Bex's Bakes</h1>
-        <Router>
+        <Router basename={process.env.PUBLIC_URL}>
           <div>
             <Route
               path="/insert"
