@@ -1,5 +1,4 @@
-import firebase from "firebase";
-import "firebase/app";
+import firebase from "firebase/app";
 import "firebase/firestore";
 import "firebase/auth";
 import registerServiceWorker from "./registerServiceWorker";
@@ -34,9 +33,7 @@ const provider = new firebase.auth.GoogleAuthProvider();
 export const AuthProvider = provider;
 
 // date issue fix according to firebase
-const settings = {
-  timestampsInSnapshots: true
-};
+const settings = {};
 db.settings(settings);
 
 // firebase collections
